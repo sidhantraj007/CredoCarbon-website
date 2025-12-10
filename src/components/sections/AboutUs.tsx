@@ -29,7 +29,7 @@ export default function AboutUs() {
 
   const founder = {
     name: "Dr. Haider Abbas",
-    picture: "/images/haider.jpeg",
+    picture: "images/haider.jpeg",
     desg: "Founder & CEO, CredoCarbon",
     linkedIn: "https://www.linkedin.com/in/-haiderabbas/",
     mail: "mailto:haider@solarad.ai",
