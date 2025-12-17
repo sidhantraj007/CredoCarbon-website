@@ -17,7 +17,7 @@ export default function Hero() {
       id="overview"
       className="
         relative overflow-hidden
-        bg-slate-950
+        bg-slate-950 
         min-h-[90vh]
         pt-20 pb-36 md:pt-32 md:pb-44
       "
