@@ -71,12 +71,15 @@ export default function Header() {
         </nav>
 
         {/* CTA BUTTON */}
-        <NavLink
-          to="/platform"
-          className="rounded-full bg-emerald-500/10 border border-emerald-400/30 px-5 py-2 text-xs text-emerald-300 hover:bg-emerald-500/20 transition"
-        >
-          Explore Platform
-        </NavLink>
+       <a
+  href="https://credocarbon-web-641001192587.asia-south2.run.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full bg-emerald-500/10 border border-emerald-400/30 px-5 py-2 text-xs text-emerald-300 hover:bg-emerald-500/20 transition"
+>
+  Explore Platform
+</a>
+
       </div>
     </header>
   );

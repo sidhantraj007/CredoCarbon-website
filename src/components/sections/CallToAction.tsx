@@ -24,9 +24,16 @@ export default function CallToAction() {
           >
             Book a 30-min discovery call
           </Button>
-          <Button variant="outline" className="text-[13px] font-semibold">
-            Explore product walkthrough
-          </Button>
+          <a
+  href="https://credocarbon-web-641001192587.asia-south2.run.app"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button variant="outline" className="text-[13px] font-semibold">
+    Explore product walkthrough
+  </Button>
+</a>
+
         </div>
       </div>
     </section>
