@@ -66,11 +66,11 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-2 text-xs pt-2">
               <a
-                href="mailto:contact@credocarbon.com"
+                href="mailto:info@credocarbon.com"
                 className="flex items-center gap-2 hover:text-emerald-400 transition"
               >
                 <Mail className="w-3.5 h-3.5 text-emerald-400" />
-                contact@credocarbon.com
+                info@credocarbon.com
               </a>
 
               <a
@@ -78,7 +78,7 @@ export default function Footer() {
                 className="flex items-center gap-2 hover:text-emerald-400 transition"
               >
                 <Phone className="w-3.5 h-3.5 text-emerald-400" />
-                +1 (833) 174-484
+                +91 97951 19246
               </a>
 
               <div className="flex items-center gap-2 text-slate-500">

@@ -10,7 +10,7 @@ const buyerFlow = [
     color: "from-purple-400 to-pink-400"
   },
   {
-    step: "Analyze", 
+    step: "Analyze",
     title: "Due Diligence Suite",
     desc: "VVB-verified documents, risk indicators, and auto-generated procurement bundles",
     icon: DollarSign,
@@ -52,12 +52,12 @@ export default function BuyerJourney() {
               Buyer Experience
             </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">
-            Transparent 
+            Transparent
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent"> Procurement</span>
           </h2>
-          
+
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Intelligent procurement with risk-adjusted pricing and provenance tracking
           </p>
@@ -82,35 +82,35 @@ export default function BuyerJourney() {
                 'md:col-start-2 md:row-start-3', // Bottom
                 'md:col-start-1 md:row-start-2'  // Left
               ];
-              
+
               return (
                 <div
                   key={item.title}
                   className={`group relative ${positions[index] || ''}`}
                 >
-                  <div className="relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-900/60 backdrop-blur-sm p-6 transition-all duration-300 hover:border-purple-400/40 hover:bg-slate-800/80">
+                  <div className="relative overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-900/40 backdrop-blur-sm p-6 transition-all duration-300 hover:border-purple-400/60 hover:bg-slate-800/60 hover:shadow-xl hover:shadow-purple-500/10">
                     {/* Dynamic gradient overlay */}
-                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${item.color} opacity-10`} />
-                    
+                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${item.color}`} />
+
                     <div className="relative text-center">
                       {/* Icon with dynamic gradient */}
                       <div className="relative mb-4 mx-auto">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} opacity-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <item.icon className="w-8 h-8 text-white" />
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} opacity-80 flex items-center justify-center group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 shadow-lg`}>
+                          <item.icon className="w-8 h-8 text-white drop-shadow-lg" />
                         </div>
-                        <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} opacity-30 blur-xl group-hover:opacity-60 transition-opacity duration-300`} />
+                        <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} opacity-40 blur-xl group-hover:opacity-70 transition-opacity duration-300`} />
                       </div>
 
                       {/* Step indicator */}
-                      <div className="inline-flex items-center gap-1 rounded-full bg-slate-800 border border-slate-600 px-3 py-1 mb-3">
-                        <span className="text-xs font-medium text-slate-400">{item.step}</span>
+                      <div className="inline-flex items-center gap-1 rounded-full bg-slate-800/80 border border-slate-600/50 px-3 py-1 mb-3">
+                        <span className="text-xs font-medium text-slate-300">{item.step}</span>
                       </div>
 
-                      <h3 className="text-lg font-semibold text-slate-50 mb-2 group-hover:text-purple-100 transition-colors">
+                      <h3 className="text-lg font-semibold text-slate-50 mb-2 group-hover:text-white transition-colors">
                         {item.title}
                       </h3>
-                      
-                      <p className="text-sm text-slate-400 leading-relaxed">
+
+                      <p className="text-sm text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors">
                         {item.desc}
                       </p>
                     </div>

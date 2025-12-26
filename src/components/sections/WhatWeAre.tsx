@@ -251,8 +251,8 @@ export default function WhatWeAre() {
           })}
         </div>
 
-        {/* Visual flow connector */}
-        <div className="flex justify-center items-center gap-4 mb-8">
+        {/* Visual flow connector - Hidden on mobile */}
+        <div className="hidden md:flex justify-center items-center gap-4 mb-8">
           {pillars.map((pillar, index) => (
             <div key={pillar.title} className="flex items-center">
               <div className="flex items-center gap-2">
@@ -269,7 +269,7 @@ export default function WhatWeAre() {
         </div>
 
         {/* Tagline */}
-        <p className="text-center text-sm text-slate-500">
+        <p className="text-center text-xs md:text-sm text-slate-500 px-4">
           Developers ship faster · VVBs trust what they review · Buyers trust what they buy
         </p>
       </div>

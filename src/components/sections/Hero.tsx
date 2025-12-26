@@ -18,8 +18,8 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-slate-950 
-        min-h-[90vh]
-        pt-20 pb-36 md:pt-32 md:pb-44
+        min-h-[85vh] md:min-h-[90vh]
+        pt-4 pb-12 md:pt-32 md:pb-44
       "
     >
       {/* Video background */}
@@ -40,38 +40,38 @@ export default function Hero() {
       {/* Gradient overlay (softened) */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(35deg,rgba(2,44,34,0.55)_0%,rgba(5,150,105,0.28)_40%,rgba(110,231,183,0.12)_100%)]" />
 
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-14 px-6 md:flex-row md:items-center md:gap-16 md:translate-y-8">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-8 md:gap-14 px-4 md:px-6 md:flex-row md:items-center md:gap-16 md:translate-y-8">
         <div className="flex-1">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-700/20 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-50 backdrop-blur">
+          <div className="mb-4 md:mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-700/20 px-2.5 md:px-3 py-1 md:py-1.5 text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.12em] md:tracking-[0.18em] text-emerald-50 backdrop-blur">
             <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-300" />
             Unified carbon credit infrastructure
           </div>
 
           <TextGenerateEffect words={"CredoCarbon: One Stack for Developers, VVBs & Buyers"} />
 
-          <p className="max-w-xl text-sm md:text-base lg:text-lg leading-relaxed text-emerald-50/90 mb-6 mt-4">
+          <p className="max-w-xl text-xs md:text-sm lg:text-lg leading-relaxed text-emerald-50/90 mb-4 md:mb-6 mt-3 md:mt-4">
             A dedicated infrastructure layer that digitises project MRV, registry workflows and OTC trading —
             creating unified carbon credit operations from development to retirement.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <Button className="bg-slate-800/95 text-[12px] md:text-[13px] font-extrabold px-5 py-2.5 text-emerald-200 hover:bg-emerald-200/50">
+          <div className="flex flex-wrap items-center gap-3 md:gap-4">
+            <Button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-[11px] md:text-[13px] font-extrabold px-4 md:px-6 py-2.5 md:py-3 text-white hover:from-emerald-400 hover:to-emerald-500 shadow-lg shadow-emerald-500/40 hover:shadow-emerald-500/60 hover:scale-105 transition-all duration-300">
               Talk to us
             </Button>
 
             <Button
               variant="outline"
               className="
-                bg-white/10 text-[12px] md:text-[13px] font-extrabold px-5 py-2.5
+                bg-white/10 text-[11px] md:text-[13px] font-extrabold px-3 md:px-5 py-2.5
                 text-emerald-50 hover:bg-slate-800 border-emerald-200/50
               "
             >
-              <BarChart3 className="mr-2 h-4 w-4" />
-              View end-to-end lifecycle
+              <BarChart3 className="mr-1.5 md:mr-2 h-3.5 md:h-4 w-3.5 md:w-4" />
+              View lifecycle
             </Button>
           </div>
 
-          <p className="mt-4 text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-emerald-100/80">
+          <p className="mt-3 md:mt-4 text-[9px] md:text-[11px] uppercase tracking-[0.18em] md:tracking-[0.22em] text-emerald-100/80">
             Developers · VVBs · Buyers · Registries
           </p>
         </div>

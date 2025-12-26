@@ -11,7 +11,7 @@ const pilotPhases = [
   },
   {
     icon: Zap,
-    phase: "Execute", 
+    phase: "Execute",
     title: "Live MRV Cycle",
     desc: "Run monitoring, reporting, and verification with real data and VVB collaboration",
     timeline: "Week 3-8"
@@ -44,12 +44,12 @@ export default function ImplementationPilot() {
               Implementation
             </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">
-            Start with a 
+            Start with a
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> Live Pilot</span>
           </h2>
-          
+
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Real-world MRV workflows from setup to portfolio scaling
           </p>
@@ -59,17 +59,17 @@ export default function ImplementationPilot() {
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent transform -translate-y-1/2 hidden md:block" />
-          
+
           <div className="grid gap-8 md:grid-cols-3">
             {pilotPhases.map((phase, index) => (
               <div key={phase.title} className="relative">
                 {/* Timeline node */}
                 {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full border-4 border-slate-950 z-10 hidden md:block" /> */}
-                
+
                 <div className="group relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-900/60 backdrop-blur-sm p-8 text-center transition-all duration-300 hover:border-emerald-400/40 hover:bg-slate-800/80">
                   {/* Animated background */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
-                  
+
                   <div className="relative">
                     {/* Icon */}
                     <div className="relative mb-6 mx-auto">
@@ -87,7 +87,7 @@ export default function ImplementationPilot() {
                     <h3 className="text-xl font-semibold text-slate-50 mb-3 group-hover:text-emerald-100 transition-colors">
                       {phase.title}
                     </h3>
-                    
+
                     <p className="text-sm text-slate-400 mb-4 leading-relaxed">
                       {phase.desc}
                     </p>
@@ -106,12 +106,15 @@ export default function ImplementationPilot() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 rounded-2xl border border-slate-700 bg-slate-900/50 px-8 py-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 rounded-2xl border border-slate-700 bg-slate-900/50 px-6 md:px-8 py-5 md:py-6">
             <span className="text-sm font-medium text-slate-300">Ready to start your pilot?</span>
-            <div className="flex items-center gap-2 text-emerald-400">
-              <span className="text-sm font-medium">Talk to us</span>
-              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            </div>
+            <button className="group relative rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-2.5 text-sm font-semibold text-white hover:from-emerald-400 hover:to-emerald-500 transition-all duration-300 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:scale-105">
+              <span className="relative z-10 flex items-center gap-2">
+                Talk to us
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              </span>
+              <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </button>
           </div>
         </div>
       </div>
