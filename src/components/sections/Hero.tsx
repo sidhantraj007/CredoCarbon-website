@@ -1,6 +1,7 @@
 import { Leaf, Shield, BarChart3 } from "lucide-react";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { Button } from "../ui/Button";
+import CarbonTradingBanner from "../ui/CarbonTradingBanner";
 import { useEffect, useRef } from "react";
 
 export default function Hero() {
@@ -18,8 +19,8 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-slate-950 
-        min-h-[85vh] md:min-h-[90vh]
-        pt-4 pb-12 md:pt-32 md:pb-44
+        min-h-[90vh]
+        pt-20 pb-36 md:pt-32 md:pb-44
       "
     >
       {/* Video background */}
@@ -39,6 +40,11 @@ export default function Hero() {
 
       {/* Gradient overlay (softened) */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(35deg,rgba(2,44,34,0.55)_0%,rgba(5,150,105,0.28)_40%,rgba(110,231,183,0.12)_100%)]" />
+
+      {/* Carbon Trading Banner */}
+      <div className="absolute top-4 md:top-6 left-0 right-0 z-10">
+        <CarbonTradingBanner />
+      </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-8 md:gap-14 px-4 md:px-6 md:flex-row md:items-center md:gap-16 md:translate-y-8">
         <div className="flex-1">
