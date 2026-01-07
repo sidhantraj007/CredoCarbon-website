@@ -1,192 +1,160 @@
-import { Briefcase, MapPin, Clock, ArrowRight } from "lucide-react";
-
-const openPositions = [
-    {
-        title: "Senior Full-Stack Engineer",
-        department: "Engineering",
-        location: "Remote / San Francisco",
-        type: "Full-time",
-        description: "Build scalable carbon credit infrastructure with React, Node.js, and blockchain technologies."
-    },
-    {
-        title: "Carbon Market Analyst",
-        department: "Product",
-        location: "Remote / London",
-        type: "Full-time",
-        description: "Shape our product strategy with deep expertise in carbon markets and registry workflows."
-    },
-    {
-        title: "DevOps Engineer",
-        department: "Engineering",
-        location: "Remote",
-        type: "Full-time",
-        description: "Manage cloud infrastructure, CI/CD pipelines, and ensure 99.9% platform uptime."
-    },
-    {
-        title: "UX/UI Designer",
-        department: "Design",
-        location: "Remote / New York",
-        type: "Full-time",
-        description: "Create intuitive interfaces for complex carbon credit workflows and data visualization."
-    },
-    {
-        title: "Customer Success Manager",
-        department: "Customer Success",
-        location: "Remote",
-        type: "Full-time",
-        description: "Help our clients maximize value from the CredoCarbon platform and achieve their climate goals."
-    },
-    {
-        title: "Blockchain Developer",
-        department: "Engineering",
-        location: "Remote / Singapore",
-        type: "Full-time",
-        description: "Develop smart contracts and blockchain integrations for carbon credit tokenization."
-    }
-];
-
-const benefits = [
-    "Competitive salary and equity",
-    "Comprehensive health insurance",
-    "Flexible remote work",
-    "Learning & development budget",
-    "Unlimited PTO",
-    "Home office setup",
-    "Team retreats",
-    "Climate impact projects"
-];
+import { Mail, Sparkles, Heart, Users, Rocket } from "lucide-react";
 
 export default function Careers() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900">
-            {/* Hero Section */}
-            <section className="relative py-20 md:py-32 overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-500/30 to-teal-500/30 rounded-full blur-3xl animate-pulse" />
-                </div>
+        <div className="min-h-screen bg-[#05080f] relative overflow-hidden">
+            {/* Animated Background */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                {/* Gradient orbs */}
+                <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-cyan-500/20 to-violet-500/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-violet-500/10 to-indigo-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
 
-                <div className="relative mx-auto max-w-6xl px-4 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 mb-6">
-                        <Briefcase className="w-4 h-4 text-emerald-400" />
-                        <span className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-400">
-                            Careers
-                        </span>
+                {/* Grid pattern */}
+                <div className="absolute inset-0 opacity-[0.02]" style={{
+                    backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(148 163 184) 1px, transparent 0)',
+                    backgroundSize: '50px 50px'
+                }} />
+            </div>
+
+            {/* Main Content */}
+            <div className="relative min-h-screen flex items-center justify-center px-4 py-20">
+                <div className="max-w-5xl mx-auto">
+
+                    {/* Badge */}
+                    <div className="flex justify-center mb-8 animate-fade-in">
+                        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-emerald-400/40 bg-emerald-500/10 backdrop-blur-xl shadow-lg shadow-emerald-500/20">
+                            <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
+                            <span className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-300">
+                                Join Our Mission
+                            </span>
+                        </div>
                     </div>
 
-                    <h1 className="text-5xl md:text-6xl font-bold text-slate-50 mb-6">
-                        Build the future of
-                        <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                            carbon markets
+                    {/* Main Heading */}
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-center mb-8 leading-[1.1] animate-fade-in-up">
+                        <span className="text-slate-50">We're building </span>
+                        <span className="block bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent animate-gradient">
+                            climate infrastructure
                         </span>
+                        <span className="text-slate-50">for the planet</span>
                     </h1>
 
-                    <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                        Join a team of passionate innovators working to accelerate climate action
-                        through transparent, verifiable carbon credit infrastructure.
+                    {/* Subheading */}
+                    <p className="text-xl md:text-2xl text-slate-300 text-center leading-relaxed mb-16 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                        Join a team of passionate innovators, engineers, and climate advocates
+                        working to make carbon markets transparent, verifiable, and impactful.
                     </p>
-                </div>
-            </section>
 
-            {/* Benefits */}
-            <section className="relative py-16 md:py-20 border-y border-slate-800">
-                <div className="mx-auto max-w-6xl px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
-                            Why join CredoCarbon?
-                        </h2>
-                        <p className="text-lg text-slate-300">
-                            We invest in our team's growth and well-being
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-4 gap-6">
-                        {benefits.map((benefit) => (
-                            <div
-                                key={benefit}
-                                className="rounded-2xl border border-slate-700 bg-slate-900/60 p-6 text-center hover:border-emerald-400/30 transition-colors"
-                            >
-                                <div className="w-2 h-2 rounded-full bg-emerald-400 mx-auto mb-3" />
-                                <p className="text-sm text-slate-300">{benefit}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Open Positions */}
-            <section className="relative py-16 md:py-24">
-                <div className="mx-auto max-w-6xl px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
-                            Open Positions
-                        </h2>
-                        <p className="text-lg text-slate-300">
-                            Find your next opportunity
-                        </p>
-                    </div>
-
-                    <div className="space-y-4">
-                        {openPositions.map((position) => (
-                            <div
-                                key={position.title}
-                                className="group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-900/60 backdrop-blur-sm p-6 transition-all duration-300 hover:border-emerald-400/40 hover:bg-slate-800/80"
-                            >
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-emerald-500/5 to-teal-500/5" />
-
-                                <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex flex-wrap items-center gap-3 mb-2">
-                                            <h3 className="text-xl font-semibold text-slate-50 group-hover:text-emerald-100 transition-colors">
-                                                {position.title}
-                                            </h3>
-                                            <span className="text-xs px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-400/30">
-                                                {position.department}
-                                            </span>
-                                        </div>
-
-                                        <p className="text-sm text-slate-300 mb-3">
-                                            {position.description}
-                                        </p>
-
-                                        <div className="flex flex-wrap gap-4 text-xs text-slate-400">
-                                            <div className="flex items-center gap-1">
-                                                <MapPin className="w-3.5 h-3.5" />
-                                                {position.location}
-                                            </div>
-                                            <div className="flex items-center gap-1">
-                                                <Clock className="w-3.5 h-3.5" />
-                                                {position.type}
-                                            </div>
-                                        </div>
+                    {/* Values Grid */}
+                    <div className="grid md:grid-cols-3 gap-6 mb-16 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                        {[
+                            { icon: Heart, title: "Mission-Driven", desc: "Climate impact at the core" },
+                            { icon: Users, title: "Collaborative", desc: "Build together, grow together" },
+                            { icon: Rocket, title: "Innovation", desc: "Push boundaries, solve hard problems" }
+                        ].map((value, idx) => (
+                            <div key={value.title} className="group relative">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+                                <div className="relative rounded-2xl border border-slate-700/50 bg-slate-900/40 backdrop-blur-xl p-6 text-center hover:border-emerald-400/40 transition-all duration-300">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400/20 to-teal-500/20 border border-emerald-400/30 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                        <value.icon className="w-6 h-6 text-emerald-400" />
                                     </div>
-
-                                    <button className="flex items-center gap-2 px-6 py-3 rounded-xl border border-emerald-400/30 text-emerald-400 font-semibold hover:bg-emerald-500/10 transition-all duration-300 group-hover:scale-105">
-                                        Apply Now
-                                        <ArrowRight className="w-4 h-4" />
-                                    </button>
+                                    <h3 className="text-lg font-bold text-slate-50 mb-2">{value.title}</h3>
+                                    <p className="text-sm text-slate-400">{value.desc}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
 
-            {/* CTA */}
-            <section className="relative py-16 md:py-20">
-                <div className="mx-auto max-w-4xl px-4">
-                    <div className="rounded-3xl border border-emerald-400/30 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm p-12 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
-                            Don't see the right role?
-                        </h2>
-                        <p className="text-lg text-slate-300 mb-8">
-                            We're always interested in hearing from talented people. Send us your resume!
-                        </p>
-                        <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
-                            Get in Touch
-                        </button>
+                    {/* Contact Section */}
+                    <div className="relative max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                        <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/30 via-teal-400/30 to-cyan-400/30 rounded-[3rem] blur-3xl opacity-50" />
+
+                        <div className="relative rounded-[3rem] border border-emerald-400/40 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-900/90 backdrop-blur-2xl overflow-hidden">
+                            {/* Decorative elements */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-emerald-400/10 to-transparent rounded-full blur-3xl" />
+                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-cyan-400/10 to-transparent rounded-full blur-3xl" />
+
+                            <div className="relative p-12 md:p-16 text-center">
+                                {/* Icon */}
+                                <div className="flex justify-center mb-8">
+                                    <div className="relative">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-3xl blur-2xl opacity-50 animate-pulse" />
+                                        <div className="relative w-20 h-20 rounded-3xl bg-gradient-to-br from-emerald-400/30 to-teal-500/30 border-2 border-emerald-400/50 flex items-center justify-center">
+                                            <Mail className="w-10 h-10 text-emerald-400" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
+                                    Ready to make an impact?
+                                </h2>
+
+                                <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-xl mx-auto">
+                                    We're always looking for talented individuals who are passionate about climate action.
+                                    Drop us a line with your resume and let's talk!
+                                </p>
+
+                                {/* Email Button */}
+                                <a
+                                    href="mailto:info@credocarbon.com"
+                                    className="group inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-bold text-lg shadow-2xl shadow-emerald-500/50 hover:shadow-emerald-500/70 hover:scale-105 transition-all duration-300 relative overflow-hidden"
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <Mail className="w-6 h-6 relative z-10" />
+                                    <span className="relative z-10">info@credocarbon.com</span>
+                                </a>
+
+                                {/* Additional Info */}
+                                <p className="text-sm text-slate-500 mt-8">
+                                    We review all applications and respond within 48 hours
+                                </p>
+                            </div>
+
+                            {/* Bottom gradient accent */}
+                            <div className="h-2 w-full bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400" />
+                        </div>
                     </div>
+
                 </div>
-            </section>
+            </div>
+
+            <style>{`
+                @keyframes fade-in {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                
+                @keyframes fade-in-up {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                @keyframes gradient {
+                    0%, 100% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                }
+
+                .animate-fade-in {
+                    animation: fade-in 0.6s ease-out forwards;
+                }
+
+                .animate-fade-in-up {
+                    animation: fade-in-up 0.8s ease-out forwards;
+                    opacity: 0;
+                }
+
+                .animate-gradient {
+                    background-size: 200% 200%;
+                    animation: gradient 8s ease infinite;
+                }
+            `}</style>
         </div>
     );
 }

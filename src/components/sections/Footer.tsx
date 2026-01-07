@@ -7,20 +7,18 @@ export default function Footer() {
 
   const navigationLinks = {
     product: [
-      { label: "Features", href: "/features" },
       { label: "Pricing", href: "/pricing" },
-      { label: "Registries", href: "/registries" },
-      { label: "API", href: "/api" }
+      { label: "Registries", href: "/registries" }
     ],
     company: [
       { label: "About Us", href: "/about-us" },
       { label: "Careers", href: "/careers" },
-      { label: "Blog", href: "/blog" },
-      { label: "Press", href: "/press" }
+      { label: "Blogs & Newsletters", href: "/blog" }
     ],
     resources: [
       { label: "Documentation", href: "/docs" },
-      { label: "Help Center", href: "/help" }
+      { label: "Help Center", href: "/help" },
+      { label: "FAQ", href: "/faq" }
     ],
     legal: [
       { label: "Terms of Service", href: "/terms" },
