@@ -3,6 +3,7 @@ import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { Button } from "../ui/Button";
 import CarbonTradingBanner from "../ui/CarbonTradingBanner";
 import { useEffect, useRef, useState } from "react";
+import { DATA_URLS } from "../../config/dataUrls";
 
 interface RegistryTotals {
   carbon: { issued: number; retired: number };
@@ -29,7 +30,7 @@ export default function Hero() {
 
   // Fetch registry data for totals
   useEffect(() => {
-    fetch('/Data/registryData.json')
+    fetch(DATA_URLS.registryData)
       .then(res => res.json())
       .then((data: RegistryData) => {
         setTotals(data.totals);

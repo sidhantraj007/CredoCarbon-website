@@ -5,6 +5,7 @@ import {
     Sun, Wind, Droplets, Flame, TreePine, Factory, Sparkles,
     Info, Activity
 } from 'lucide-react';
+import { DATA_URLS } from '../../config/dataUrls';
 
 // Types
 interface Subsector {
@@ -365,7 +366,7 @@ export default function Insights() {
     const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
 
     useEffect(() => {
-        fetch('/Data/insightsData.json')
+        fetch(DATA_URLS.insightsData)
             .then(res => {
                 if (!res.ok) throw new Error('Failed to load data');
                 return res.json();

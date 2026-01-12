@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Leaf, Zap, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { DATA_URLS } from '../../config/dataUrls';
 
 interface Registry {
     id: string;
@@ -36,7 +37,7 @@ export default function CarbonTradingBanner() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/Data/registryData.json')
+        fetch(DATA_URLS.registryData)
             .then(res => res.json())
             .then((registryData: RegistryData) => {
                 setData(registryData);

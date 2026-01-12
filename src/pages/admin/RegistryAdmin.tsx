@@ -10,6 +10,7 @@ import {
     Calendar,
     Database
 } from 'lucide-react';
+import { DATA_URLS } from '../../config/dataUrls';
 
 interface Registry {
     id: string;
@@ -51,7 +52,7 @@ export default function RegistryAdmin() {
 
     // Load data
     useEffect(() => {
-        fetch('/Data/registryData.json')
+        fetch(DATA_URLS.registryData)
             .then(res => res.json())
             .then((registryData: RegistryData) => {
                 setData(registryData);
